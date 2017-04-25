@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="es-ES">
+	<head>
+		<title>
+			<?php
+			global $page, $paged;
+			wp_title( '|', true, 'right' );
+			bloginfo( 'name' );
+			$site_description = get_bloginfo( 'description', 'display' );
+			if ( $site_description && ( is_home() || is_front_page() ) )
+				echo " | $site_description";
+			if ( $paged >= 2 || $page >= 2 )
+				echo ' | ' . sprintf( __( 'Page %s', 'bicitravel' ), max( $paged, $page ) );
+			?>
+		</title>
+		<meta charset="<?php bloginfo('charset'); ?>" />          
+		<meta name="description" content="<?php bloginfo('description'); ?>" />
+		<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.png" />           
+		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+		<!--[if lt IE 9]>
+		<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
+		<![endif]-->
+		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery_002.js"></script>
+		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.js"></script>
+		<?php wp_head(); ?>        
+	</head>
+	<body>
+		<div id="contenedora">
+			<header id="cabecera">
+				<hgroup>
+					<h1><?php bloginfo('name') ?></h1>
+					<h2><?php bloginfo('description'); ?></h2>
+				</hgroup>
+			<div class="logotipo">
+				<a href="<?php bloginfo('url') ?>/" title="<?php bloginfo('name') ?>" target="_self" rel="home">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/logotipo-bicitravel.png" title="<?php bloginfo('name') ?>" alt="<?php bloginfo('name') ?>" />
+				</a>
+			</div>            
+			<?php wp_nav_menu(array('container' => 'nav', 'menu' => 'Menu Principal', 'container_class' => 'menu-principal', 'menu_class' => '', 'menu_id' => 'menu-principal-items', 'theme_location' => 'primary')); ?>                         	
+		</header>
+		<div id="columnas">

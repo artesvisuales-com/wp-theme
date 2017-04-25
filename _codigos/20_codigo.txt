@@ -1,0 +1,40 @@
+<div class="comentarios-contenedora">
+	<?php
+	// Impide el acceso directo a este archivo
+	if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
+		die ('No tiene acceso directo a esta página');
+	if ( post_password_required() ) {
+	?>
+	<p class="nocomments">Esta entrada es privada. Identifíquese para añadir un comentario.</p>
+	<?php
+	return;
+	}
+	?>
+	<?php if ( have_comments() ) : ?>
+		<h3 id="comments">
+			<?php comments_number('Sin respuesta', '1 respuesta', '% respuestas' );?> de &#8220;<?php the_title(); ?>&#8221;
+		</h3>
+		<div class="navigation">
+			<div class="alignleft"><?php previous_comments_link() ?></div>
+			<div class="alignright"><?php next_comments_link() ?></div>
+		</div>
+		<ol class="commentlist">
+			<?php wp_list_comments(); ?>
+		</ol>
+		<div class="navigation">
+			<div class="alignleft"><?php previous_comments_link() ?></div>
+			<div class="alignright"><?php next_comments_link() ?></div>
+		</div>
+		<?php else : ?>
+		<?php if ('open' == $post->comment_status) : ?>
+		<!-- Si los comentarios estan abiertos, pero no hay comentarios. -->
+		<?php else : ?>
+		<!-- Si los comentarios estan cerrados.
+		<p class="nocomments">Los comentarios están cerrados.</p> 
+		-->
+		<?php endif; ?>
+		<?php endif; ?>
+		<?php if ('open' == $post->comment_status) : ?>
+		<?php comment_form(); ?>
+	<?php endif; ?>
+</div>

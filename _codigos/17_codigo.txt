@@ -1,0 +1,5 @@
+function new_excerpt_more($more) {
+      	global $post;
+	return '... <p class="ver-detalle"><a href="'. get_permalink($post->ID) . '" title="Leer noticia">Leer noticia</a></p>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');

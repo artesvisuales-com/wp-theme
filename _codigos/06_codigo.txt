@@ -1,0 +1,18 @@
+		</div>
+		<footer id="footer">
+			<p><strong>Bici Travel</strong> &copy; Todos los derechos reservados&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" title="Aviso legal" target="_self">Aviso legal</a> - <a href="#" title="Contacto" target="_self">Contacto</a> - <a href="#" title="Mapa del Sitio" target="_self">Mapa del Sitio</a></p>
+		</footer>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.slideshow').cycle({
+					fx: 'fade', 
+					speed: 2000, 
+					timeout: 5000, 
+					pause: 1  
+				});
+			});
+		</script>
+		<?php wp_footer(); ?>  
+	</body>
+</html>

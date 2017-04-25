@@ -1,0 +1,12 @@
+<section class="buscador">
+	<h4>Buscador avanzado</h4>
+	<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>" target="_self">
+		<div class="fila_formulario">
+			<label class="screen-reader-text" for="s">Buscar</label>
+			<input type="text" name="s" id="s" value="" />  
+		</div>
+		<div class="fila_botones">
+			<input type="submit" name="buscar" value="Buscar" id="searchsubmit" />
+		</div>
+	</form>
+</section>

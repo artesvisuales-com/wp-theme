@@ -1,0 +1,40 @@
+<?php get_header(); ?>
+<div class="col1">
+	<?php get_sidebar(left); ?>
+</div>
+<div class="col3">	
+	<?php get_sidebar(right); ?>
+</div>
+<div class="col2">
+	<div class="contenido">
+		<?php if ( have_posts() ) : ?>            
+    	<h1 class="page-title">
+			<?php _e( 'Resultados de buscar: ', 'bicitravel' ); ?><?php the_search_query(); ?>
+		</h1>
+		<?php while ( have_posts() ) : the_post() ?>
+    	<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>        
+    		<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( __('Permalink to %s', 'bicitravel'), the_title_attribute('echo=0') ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+			<div class="entry-summary">     
+				<?php the_excerpt( __( 'Leer más', 'bicitravel' )  ); ?>
+			</div>
+			<?php if ( $post->post_type == 'post' ) { ?>                                                                    
+			<div class="entry-utility">
+				<p>Fecha de Publicación: <strong><?php the_time('j \d\e\ F \(Y\)'); ?></strong><br />
+				Autor: <strong><?php the_author_posts_link(); ?></strong><br />
+				Categoría: <strong><?php the_category(', ') ?></strong></p>
+			</div>
+			<?php } ?>                                      
+        </div>            
+        <?php endwhile; ?>                         
+		<p class="paginador"><?php posts_nav_link(' &#8212; ', ('&laquo; Página anterior'), -('Siguiente Página &raquo;')); ?></p>
+        <?php else : ?>
+    	<div id="post-0" class="post no-results not-found"> 
+    		<h2 class="entry-title"><?php _e( 'No se han encontrado resultados', 'bicitravel' ) ?></h2>
+    		<div class="entry-content">
+				<p><?php _e( 'No se han encontrado resultados, por favor pruebe con otras palabras.', 'bicitravel' ); ?></p>         
+			</div>
+    	</div>
+        <?php endif; ?>		
+	</div>
+</div>
+<?php get_footer(); ?>

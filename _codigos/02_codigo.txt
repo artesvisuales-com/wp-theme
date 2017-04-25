@@ -1,0 +1,21 @@
+<ul class="slideshow">
+	<li><img src="http://www.midominio.com/wordpress/wp-content/uploads/2012/05/img-carrusel-01.jpg" alt="" title="" width="462" height="200" class="alignnone size-full wp-image-127" /></li>
+	<li><img src="http://www.midominio.com/wordpress/wp-content/uploads/2012/05/img-carrusel-02.jpg" alt="" title="" width="462" height="200" class="alignnone size-full wp-image-128" /></li>
+	<li><img src="http://www.midominio.com/wordpress/wp-content/uploads/2012/05/img-carrusel-03.jpg" alt="" title="" width="462" height="200" class="alignnone size-full wp-image-128" /></li>
+	<li><img src="http://www.midominio.com/wordpress/wp-content/uploads/2012/05/img-carrusel-04.jpg" alt="" title="" width="462" height="200" class="alignnone size-full wp-image-128" /></li>
+</ul>
+<h2>Misión, Visión y Valores</h2>
+<ul class="lista-home">
+	<li>
+		<img src="http://www.midominio.com/wordpress/wp-content/uploads/2012/05/img_mision_home_01.jpg" alt="Los destinos más atractivos" title="Los destinos más atractivos" width="120" height="90" class="alignnone size-full wp-image-120" />
+		<p><strong>Los destinos más atractivos</strong><br />Búsqueda de los mejores destinos, las rutas más adecuadas, los mejores hoteles y las visitas más interesantes.<br />Consulte nuestro catálogo de rutas europeas de gran atractivo turístico por parajes naturales, pudiendo seleccionar distintos recorridos tematizados.</p>
+	</li>
+	<li>
+		<img src="http://www.midominio.comwordpress/wp-content/uploads/2012/05/img_mision_home_02.jpg" alt="Los mejores recursos" title="Los mejores recursos" width="120" height="90" class="alignnone size-full wp-image-121" />
+		<p><strong>Los mejores recursos</strong><br />Proporcionando el mejor transporte, vehículo de apoyo, completa y práctica información del viaje, bicicleta de calidad y expertos en guías.<br />Nuestros equipos garantizan la calidad de los materiales empleados, adaptándose a las necesidades de cada usuario,permitiendo el máximo confort en cada recorrido. Consulte nuestras ofertas de equipación para las distintas rutas.</p>
+	</li>
+	<li>
+		<img src="http://www.midominio.com/wordpress/wp-content/uploads/2012/05/img_mision_home_03.jpg" alt="La satisfacción nos importa" title="La satisfacción nos importa" width="120" height="90" class="alignnone size-full wp-image-122" />
+		<p><strong>La satisfacción nos importa</strong><br />Estando en contacto con usted para que todo el viajes sea la experiencia que buscaba. no nos quedamos a gusto si no vemos sonrisas y felicidad.<br />Ofrecemos una amplia gama de servicios y asistencia técnica a todos los niveles, ofreciendo una gran calidad en el trato humano.</p>
+	</li>
+</ul>

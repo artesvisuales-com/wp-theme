@@ -1,0 +1,20 @@
+<?php get_header(); ?>
+<div class="col1">
+	<?php get_sidebar(left); ?>
+</div>
+<div class="col3">	
+	<?php get_sidebar(right); ?>
+</div>
+<div class="col2">
+	<div class="contenido">
+		<h1><?php bloginfo('name') ?></h1>
+		<h2>Error 404</h2>
+		<p>La página a la que está intentando acceder no se encuentra. Puede ver la estructura del sitio para navegar por ella:</p>
+        <p><strong>Mapa del Sitio:</strong></p>
+        <ul>
+        	<?php wp_list_pages('title_li='); ?>
+			<?php wp_list_categories('title_li=&show_count=1'); ?>
+		</ul>        		
+	</div>
+</div>
+<?php get_footer(); ?>
